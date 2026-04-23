@@ -1,1 +1,24 @@
-/target
+# ---- Rust / Cargo ----
+/target/                # Compiled output (debug + release)
+/Cargo.lock             # Optional: ignore if it's a library, keep if it's an app
+**/*.rs.bk              # Backup files from rustfmt or editors
+
+# ---- Node / Tailwind ----
+node_modules/           # Dependencies if you ever use npm/yarn
+package-lock.json       # Optional: ignore if you don’t want lockfile
+pnpm-lock.yaml
+yarn.lock
+
+# ---- Tailwind build artifacts ----
+/static/css/output.css     # Generated CSS output
+/static/css/output.css.map   # Source map (if generated)
+/dist/                  # If you use Tailwind with bundlers (Vite, Webpack, etc.)
+
+# ---- OS / Editor junk ----
+.DS_Store               # macOS
+Thumbs.db               # Windows
+*.swp                   # Vim swap files
+*.swo
+*.log                   # Log files
+.idea/                  # JetBrains IDE
+.vscode/                # VS Code settings
