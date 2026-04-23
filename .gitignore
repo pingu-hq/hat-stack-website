@@ -1,6 +1,8 @@
 # ---- Rust / Cargo ----
 /target/                # Compiled output (debug + release)
+target/
 /Cargo.lock             # Optional: ignore if it's a library, keep if it's an app
+Cargo.lock
 **/*.rs.bk              # Backup files from rustfmt or editors
 
 # ---- Node / Tailwind ----
