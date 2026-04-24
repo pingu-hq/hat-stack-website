@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTMX + Rust SSR</title>
+  <!-- Built Tailwind CSS -->
+  <link href="/static/css/output.css" rel="stylesheet">
+  <!-- HTMX -->
+  <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+</head>
+<body class="bg-gray-600 p-8">
+  <h1 class="text-3xl font-bold text-indigo-600 mb-4">
+    Hello from Rust SSR! 🦀
+  </h1>
+  
+  <!-- HTMX Example: Load partial without page reload -->
+  <button 
+    hx-get="/partials/user-list.html" 
+    hx-target="#user-list"
+    class="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600">
+    Load Users
+  </button>
+  
+  <div id="user-list" class="mt-4"></div>
+</body>
+</html>
