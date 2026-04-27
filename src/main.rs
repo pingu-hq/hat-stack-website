@@ -2,7 +2,7 @@ use axum::{routing::get, Router, serve};
 use tokio::net::TcpListener;
 use tower_http::services::ServeDir;
 
-mod routing;  // Declares routing module
+mod full_page_routing;
 
 #[tokio::main]
 async fn main() {
@@ -20,12 +20,12 @@ async fn main() {
 
     // Router: dynamic routes + static file services
     let app = Router::new()
-        // Dynamic HTMX routes (handlers in src/routing/handlers.rs)
-        .route("/", get(routing::handlers::index))
-        .route("/users", get(routing::handlers::users_partial))
+
+        .route("/about-me",get(full_page_routing::handlers::about_me_page))
+    
         // Static file services
         .nest_service("/static", static_files)
-        // Fallback: serve templates/ for everything else
+
         .fallback_service(templates);
 
     let listener = TcpListener::bind("127.0.0.1:8001")
