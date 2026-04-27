@@ -7,13 +7,15 @@ Cargo.lock
 
 # ---- Node / Tailwind ----
 node_modules/           # Dependencies if you ever use npm/yarn
+node_modules
+static/css/output.css     # Generated CSS output
+/static/css/output.css
 package-lock.json       # Optional: ignore if you don’t want lockfile
+/package-lock.json
 pnpm-lock.yaml
 yarn.lock
 
 # ---- Tailwind build artifacts ----
-/static/css/output.css     # Generated CSS output
-/static/css/output.css.map   # Source map (if generated)
 /dist/                  # If you use Tailwind with bundlers (Vite, Webpack, etc.)
 
 # ---- OS / Editor junk ----
